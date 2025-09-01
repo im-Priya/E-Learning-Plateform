@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - TechLearn Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><i class="fas fa-graduation-cap"></i><span>TechLearn Pro</span></div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="signin.html" class="signin-btn"><i class="fas fa-user"></i> Sign In</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Explore Our <span class="gradient-text">Courses</span></h1>
+                <p class="hero-description">Choose from industry-ready programs designed with hands-on projects and expert mentorship.</p>
+            </div>
+            <div class="hero-image"></div>
+        </div>
+    </header>
+
+    <main class="courses" style="padding-top: 4rem;">
+        <div class="container">
+            <div class="section-header"><h2>All Programs</h2><p>Click a course to view the detailed syllabus.</p></div>
+            <div class="courses-grid">
+                <a id="python" class="course-card" onclick="openCourseModal('python')">
+                    <div class="course-image"><i class="fab fa-python"></i></div>
+                    <div class="course-content"><h3>Python Full Stack Development</h3><p>Python, Django, React, databases.</p><div class="course-details"><span><i class="fas fa-clock"></i> 6 months</span><span><i class="fas fa-users"></i> 2.5K</span></div></div>
+                </a>
+                <a id="java" class="course-card" onclick="openCourseModal('java')">
+                    <div class="course-image"><i class="fab fa-java"></i></div>
+                    <div class="course-content"><h3>Java Full Stack Development</h3><p>Spring Boot, Angular, microservices.</p><div class="course-details"><span><i class="fas fa-clock"></i> 7 months</span><span><i class="fas fa-users"></i> 1.8K</span></div></div>
+                </a>
+                <a id="mern" class="course-card" onclick="openCourseModal('mern')">
+                    <div class="course-image"><i class="fab fa-node-js"></i></div>
+                    <div class="course-content"><h3>MERN/MEAN Stack</h3><p>MongoDB, Express, React, Node.</p><div class="course-details"><span><i class="fas fa-clock"></i> 5 months</span><span><i class="fas fa-users"></i> 3.2K</span></div></div>
+                </a>
+                <a id="cybersecurity" class="course-card" onclick="openCourseModal('cybersecurity')">
+                    <div class="course-image"><i class="fas fa-shield-alt"></i></div>
+                    <div class="course-content"><h3>Cybersecurity</h3><p>Ethical hacking, defense, forensics.</p><div class="course-details"><span><i class="fas fa-clock"></i> 8 months</span><span><i class="fas fa-users"></i> 1.5K</span></div></div>
+                </a>
+                <a id="devops" class="course-card" onclick="openCourseModal('devops')">
+                    <div class="course-image"><i class="fas fa-infinity"></i></div>
+                    <div class="course-content"><h3>DevOps & Cloud</h3><p>CI/CD, Docker, Kubernetes, AWS/Azure.</p><div class="course-details"><span><i class="fas fa-clock"></i> 6 months</span><span><i class="fas fa-users"></i> 2.1K</span></div></div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="courseModal" class="modal">
+        <div class="modal-content course-modal">
+            <span class="close" onclick="closeCourseModal()">&times;</span>
+            <div id="courseModalContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-graduation-cap"></i><span>TechLearn Pro</span></div>
+                    <p>Empowering learners worldwide with cutting-edge technology education.</p>
+                    <div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+                </div>
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-section"><h4>Courses</h4><ul><li><a href="courses.html#python">Python Full Stack</a></li><li><a href="courses.html#java">Java Full Stack</a></li><li><a href="courses.html#mern">MERN Stack</a></li><li><a href="courses.html#cybersecurity">Cybersecurity</a></li></ul></div>
+                <div class="footer-section"><h4>Newsletter</h4><p>Subscribe to our newsletter for updates and offers.</p><form class="newsletter-form"><input type="email" placeholder="Enter your email"><button type="submit"><i class="fas fa-paper-plane"></i></button></form></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 TechLearn Pro. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

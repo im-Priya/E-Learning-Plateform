@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn Pro - Advanced E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>TechLearn Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="signin.html" class="signin-btn">
+                        <i class="fas fa-user"></i> Sign In
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Master the Future of Technology
+                    <span class="gradient-text">Learn from Experts</span>
+                </h1>
+                <p class="hero-description">
+                    Join thousands of learners worldwide and master in-demand tech skills. 
+                    From Python to Cybersecurity, we've got you covered with industry-leading courses.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('courses')">
+                        Explore Courses
+                    </button>
+                    <button class="btn btn-secondary" onclick="openSignInModal()">
+                        Get Started
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Courses</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-code"></i>
+                    <span>Live Coding</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-users"></i>
+                    <span>Expert Mentors</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certification</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About TechLearn Pro</h2>
+                <p>Empowering learners with cutting-edge technology education</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Why Choose Us?</h3>
+                    <p>TechLearn Pro is a premier e-learning platform dedicated to providing high-quality technology education. Our mission is to bridge the gap between traditional education and industry requirements.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>
+                                <h4>Hands-on Projects</h4>
+                                <p>Learn by doing with real-world projects</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Flexible Learning</h4>
+                                <p>Study at your own pace, anytime, anywhere</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Get help whenever you need it</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Industry Recognition</h4>
+                                <p>Certificates recognized by top companies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Students learning">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Featured Courses</h2>
+                <p>Master the most in-demand skills in the tech industry</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="openCourseModal('python')">
+                    <div class="course-image">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Python Full Stack Development</h3>
+                        <p>Master Python, Django, React, and database management</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 6 months</span>
+                            <span><i class="fas fa-users"></i> 2.5K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$499</span>
+                            <span class="original-price">$799</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('java')">
+                    <div class="course-image">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Java Full Stack Development</h3>
+                        <p>Learn Spring Boot, Angular, and enterprise development</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 7 months</span>
+                            <span><i class="fas fa-users"></i> 1.8K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$599</span>
+                            <span class="original-price">$899</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('mern')">
+                    <div class="course-image">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>MERN/MEAN Stack Development</h3>
+                        <p>Build modern web applications with MongoDB, Express, React, Node.js</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 5 months</span>
+                            <span><i class="fas fa-users"></i> 3.2K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$449</span>
+                            <span class="original-price">$699</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('cybersecurity')">
+                    <div class="course-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cybersecurity & Ethical Hacking</h3>
+                        <p>Learn to protect systems and networks from cyber threats</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 8 months</span>
+                            <span><i class="fas fa-users"></i> 1.5K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$699</span>
+                            <span class="original-price">$999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('devops')">
+                    <div class="course-image">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>DevOps & Cloud Engineering</h3>
+                        <p>Master CI/CD, Docker, Kubernetes, and cloud platforms</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 6 months</span>
+                            <span><i class="fas fa-users"></i> 2.1K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$549</span>
+                            <span class="original-price">$799</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('ai')">
+                    <div class="course-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Explore artificial intelligence and data science</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 9 months</span>
+                            <span><i class="fas fa-users"></i> 1.2K students</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">$799</span>
+                            <span class="original-price">$1199</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Contact us for any inquiries.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Gurugram<br>Haryana ,India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 00000-00000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@techlearnpro.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224568.47635021672!2d76.8252643821066!3d28.422803846950597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1756719474054!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>TechLearn Pro</span>
+                    </div>
+                    <p>Empowering learners worldwide with cutting-edge technology education.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#" onclick="openCourseModal('python')">Python Full Stack</a></li>
+                        <li><a href="#" onclick="openCourseModal('java')">Java Full Stack</a></li>
+                        <li><a href="#" onclick="openCourseModal('mern')">MERN Stack</a></li>
+                        <li><a href="#" onclick="openCourseModal('cybersecurity')">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechLearn Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignInModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to continue your learning journey</p>
+            </div>
+            <form id="signInForm" class="modal-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <button type="button" class="btn btn-google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <p class="signup-link">
+                    Don't have an account? <a href="#" onclick="switchToSignUp()">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Course Detail Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content course-modal">
+            <span class="close" onclick="closeCourseModal()">&times;</span>
+            <div id="courseModalContent">
+                <!-- Course content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
